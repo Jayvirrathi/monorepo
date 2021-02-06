@@ -1,0 +1,12 @@
+{
+  "name": "monorepo",
+  "version": "1.0.0",
+"scripts": {
+	"start": "lerna run start",
+	"dev": "lerna run dev",
+    "test": "lerna run test --scope={web,}",
+	"diff":"lerna diff",
+	"new-version":"lerna version --conventional-commits --yes",
+	"clean-npm":"lerna bootstrap --hoist"
+  }
+}
