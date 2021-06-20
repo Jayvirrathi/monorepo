@@ -11,22 +11,28 @@
 
 ```bash
 # install dependencies
-npx lerna bootstrap --hoist
+npm run bootstrap
 
-# serve with hot reload at localhost:3000 & localhost:5000
-npm start
+# serve with hot reload at localhost:3000 & localhost:5000(server & client)
+npm dev
+
+# serve with hot reload at localhost:5000(server)
+npm run dev:server
+
+# serve with hot reload at localhost:5000(client)
+npm run dev:web
+
+```
+
+## Production
+
+```
+npm run start
 ```
 
 ## Clean Dependencies
 
 ```bash
-npx lerna clean -y
+npm run clean
 ```
 
-## other commands
-
-```bash
-lerna run test --scope=web
-
-lerna run test --scope={web,}
-```

@@ -3,10 +3,17 @@
   "version": "1.0.0",
 "scripts": {
 	"start": "lerna run start",
+	"start:web": "lerna run start --scope=web",
+	"start:server": "lerna run start --scope=server",
 	"dev": "lerna run dev",
-    "test": "lerna run test --scope={web,}",
+	"dev:web": "lerna run dev --scope=web",
+	"dev:server": "lerna run dev --scope=server",
 	"diff":"lerna diff",
 	"new-version":"lerna version --conventional-commits --yes",
-	"clean-npm":"lerna bootstrap --hoist"
+	"bootstrap": "npx lerna bootstrap --hoist",
+    "clean": "npx lerna clean -y"
+  },
+  "devDependencies": {
+    "lerna": "^4.0.0"
   }
 }
